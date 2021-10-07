@@ -1,0 +1,27 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    background: antiquewhite;
+    height: 600px;
+    text-align: center;
+}
+
+table{
+    margin: auto;
+    width: 50%;
+}
+
+button{
+    width: 100%;
+    height: 60px;
+    border-radius: 14px;
+    font-size: 31px;
+}
+input{
+    width: 50%;
+    height: 35px;
+}
