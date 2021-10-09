@@ -27,7 +27,7 @@ setInterval(() => {
         second = "0" + second;
     }
 
-    clicktime.innerHTML = ("<span>" + houre + "</span>" + "<span>" + AM_PM + "</span>" + " : " + "<span>" + minute + "</span>" + " : " + "<span>" + second + "</span>" )
+    clicktime.innerHTML = ("<span>" + houre + "</span>" + "<span>" + AM_PM + "</span>" + " : " + "<span>" + minute + "</span>" + " : " + "<span>" + second + "</span>")
 }, 1000);
 
 
@@ -41,65 +41,42 @@ let dayword = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday",
 const ShowNew = document.getElementById("dayit");
 
 function Myname() {
+    setInterval(() => {
 
-    ShowNew.innerHTML ="<span>"+ dayword[T] + "</span>";
-    
+        ShowNew.innerHTML = "<span>" + dayword[T] + "</span>";
+
+    }, 1000);
 }
 Myname();
 
-setinterval(Myname, 1000)
-
-
-// season time add 
-
-// const seasonS = document.getElementsByClassName("season");
-
-
-// let DT = new Date();
-// let HR = DT.getHours();
-
-// if (HR > 5 && HR < 12) {
-//     GT = "Good Morning"
-// }
-// else if (HR > 12 && HR < 18) {
-//     GT = "Good Afternoon"
-// }
-// else if (HR > 18 && HR < 21) {
-//     GT = "Good Evening"
-// }
-// else if (HR > 21) {
-//     GT = "Good Night"
-// }
-
-
-// function GetEv() {
-//     seasonS.innerHTML = "Here Is" + GT;
-// }
-// GetEv();
 
 const seasonS = document.getElementById("light");
 
 
 let DT = new Date();
 let HR = DT.getHours();
+// console.log(HR)
 
-function clickdo(){
+function clickdo() {
+    setInterval(() => {
+        GT = "";
 
-if (HR > 5 && HR < 12) {
-    GT = "Good Morning"
-}
-else if (HR > 12 && HR < 18) {
-    GT = "Good Afternoon"
-}
-else if (HR > 18 && HR < 21) {
-    GT = "Good Evening"
-}
-else if (HR > 21) {
-    GT = "Good Night"
-}
+    if (HR > 5 && HR < 12) {
+        GT = "Good Morning"
+    }
+    else if (HR > 12 && HR < 18) {
+        GT = "Good Afternoon"
+    }
+    else if (HR > 18 && HR < 21) {
+        GT = "Good Evening"
+    }
+    else if (HR > 21) {
+        GT = "Good Night"
+    }
 
-// console.log("Good Morning")
-}
-clickdo();
+    seasonS.innerHTML = GT;
+    }, 1000);
+} clickdo();
 
-seasonS.innerHTML = GT;
+// setinterval(clickdo, 1000)
+
