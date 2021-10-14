@@ -50,8 +50,8 @@ body{
 @media screen and (max-width: 816px) {
     .container{
         height: auto;
-        width: 80%;
-        left: auto;
-        right: 6%;
+        width: auto;
+        left: 10px;
+        right: 10px;
     }
 }
