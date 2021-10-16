@@ -14,11 +14,13 @@ const clicktime = document.getElementById("timer");
 setInterval(() => {
     date = new Date();
     today = date.getDay();
+    
     houre = date.getHours();
     minute = date.getMinutes();
     second = date.getSeconds();
     AM_PM = (houre >= 12) ? " PM " : " AM ";
-    houre = (houre >= 12) ? houre - 12 : houre
+    houre = (houre > 12) ? (houre - 12) : houre;
+    // houre = 15;
     if (minute < 10) {
         minute = "0" + minute;
     }
@@ -49,25 +51,26 @@ function Myname() {
 }
 Myname();
 
-
-const seasonS = document.getElementById("light");
-
+// Gretting Messages
 
 let DT = new Date();
 let HR = DT.getHours();
-// console.log(HR)
+let MI = DT.getMinutes();
+const seasonS = document.getElementById("light");
+
+console.log(HR)
 
 function clickdo() {
     setInterval(() => {
         GT = "";
 
-    if (HR > 5 && HR < 12) {
+    if (HR > 5 && HR <= 12) {
         GT = "Good Morning"
     }
-    else if (HR > 12 && HR < 18) {
+    else if (HR > 12 && HR < 17) {
         GT = "Good Afternoon"
     }
-    else if (HR > 18 && HR < 21) {
+    else if (HR > 17 && HR <= 21) {
         GT = "Good Evening"
     }
     else if (HR > 21) {
